@@ -1,0 +1,54 @@
+<nav class="navbar navbar-expand-lg bg-primary mx-5">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">SISTEMA WEB</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Cadastrar</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Consultar</a>
+        </li>
+      </ul>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+    <h5 class="mx-5 my-3">Cadastrar - Agendamento de Potenciais Clientes</h5>
+    <p class="mx-5">Sistema Utilizado para agendamento de serviços.</p>
+<div>
+    <form class="mx-5">
+        <div class="mb-3">
+            <label for="nome" class="form-label">Nome</label>
+            <input type="text" class="form-control" id="nome" aria-describedby="nomeHelp">
+            <div id="nomeHelp" class="form-text">Digite o nome do cliente.</div>
+        </div>
+        <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
+            <div id="emailHelp" class="form-text">Digite o email do cliente.</div>
+        </div>
+        <div class="mb-3">
+            <label for="telefone" class="form-label">Telefone</label>
+            <input type="text" class="form-control" id="telefone" aria-describedby="telefoneHelp">
+            <div id="telefoneHelp" class="form-text">Digite o telefone do cliente.</div>
+        </div>
+        <div class="mb-3">
+            <label for="data" class="form-label">Data</label>
+            <input type="date" class="form-control" id="data" aria-describedby="dataHelp">
+            <div id="dataHelp" class="form-text">Digite a data do agendamento.</div>
+        </div>
+        <div class="mb-3">
+            <label for="hora" class="form-label">Hora</label>
+            <input type="time" class="form-control" id="hora" aria-describedby="horaHelp">
+            <div id="horaHelp" class="form-text">Digite a hora do agendamento.</div>
+        </div>
+        <button type="submit" class="btn btn-primary">Cadastrar</button>
+    </form>
+</div>

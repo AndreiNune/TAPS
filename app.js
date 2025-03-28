@@ -11,7 +11,7 @@ app.engine('handlebars', handlebars({ defaultLayout: 'main' })); //configurando 
 app.set('view engine', 'handlebars'); //configuração do express apontando pro handlebars
 
 app.use(bodyParser.urlencoded({extend: false}));
-app.use(bodyParser.json)
+app.use(bodyParser.json());
 
 
 app.get('/', (req, res) => {
@@ -31,6 +31,23 @@ app.post('/cadastrar', function (req, res) {
         res.send('Erro ao criar o post: ' + erro);
     });
 })
+
+app.get('/consulta', function (req, res){
+    post.findAll().then((posts) => {
+        res.render('consulta.handlebars', {posts: posts});
+        console.log(posts);
+    }).catch((erro) => {
+        res.send('Erro ao consultar os posts: ' + erro);
+})});
+
+app.get('/atualizar/:id', function (req, res){
+    post.findOne({where: {'id': req.params.id}}).then((post) => {
+        res.render('atualizar.handlebars', {post: post});
+    }).catch((erro) => {
+        res.send('Erro ao consultar o post: ' + erro);
+    });
+});
+
 
 app.listen(8081, () => {
     console.log('Servidor rodando na porta 8081');
